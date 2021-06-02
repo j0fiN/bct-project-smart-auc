@@ -1,0 +1,4 @@
+hi: echo Hi from pcmd!
+activate: poetry config virtualenvs.in-project true
+
+run: poetry run py app.py
