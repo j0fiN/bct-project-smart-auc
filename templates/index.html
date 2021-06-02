@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel = "icon" href = "{{url_for('static', filename='blockchain.png')}}"
+        type = "image/x-icon"> 
+    <title>Home</title>
+    <style>
+        body {
+            background-image: linear-gradient(60deg, rgb(100, 53, 201), #292341);
+            background-attachment: fixed;
+        }
+
+        .way-big{
+            font-size: 60px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ui inverted violet  menu">
+        <div class="item">
+            <h3>🎆</h3>
+        </div>
+        <a href="#" class="item">
+            Home
+        </a>
+        <a href="auctions/0" class="item">
+            Auctions
+        </a>
+        <a href="transaction/0" class="item">
+            Completed
+        </a>
+        <div class="right menu">
+            <div class="ui item">
+                <div class="ui compact violet inverted menu">
+                    <div class="ui simple inverted violet dropdown item">
+                        <img class="ui avatar image" src="https://semantic-ui.com/images/avatar/large/justen.jpg">
+                        <span>Hi 👋 Jofin</span>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <div class="header">Signed in as | Justen</div>
+                            <div class="ui divider"></div>
+                            <div class="item">
+                                <button class="ui inverted purple button">😎 | 🎧 | 💻</button>
+                            </div>
+                            <div class="ui divider"></div>
+                            <div class="ui inverted item">
+                                <i class="user icon"></i>Profile
+                            </div>
+                            <div class="ui inverted item">
+                                <i class="folder icon"></i>My Wallet
+                            </div>
+                            <div class="ui inverted item">
+                                <i class="users icon"></i>History
+                            </div>
+                            <div class="ui divider"></div>
+                            <div class="header">New</div>
+                            <div class="item">
+                                <i class="plus icon"></i>Auction
+                            </div>
+                            <div class="item">
+                                <i class="plus icon"></i>Bid
+                            </div>
+                            <div class="ui divider"></div>
+                            <div class="item">
+                                <i class="qrcode icon"></i>Share profile
+                            </div>
+                            <div class="item">
+                                <i class="question circle icon"></i>Help
+                            </div>
+                            <div class="item">
+                                <i class="settings icon"></i>Settings
+                            </div>
+                            <div class="item">
+                                <i class="frown icon"></i>Logout
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui container grid stackable centered computer only">
+        <div class="row">
+            <div class="ui inverted teal header">
+                <h1 class="way-big">Smart auct</h1>
+                <div class="ui divider"></div>
+                <h5><i>The one-stop for smart auctions</i></h5>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        <div class="row">
+            <div class="ui statistics">
+                <div class="ui blue inverted statistic">
+                    <div class="value">
+                        <i class="boxes icon"></i> 100+
+                    </div>
+                    <div class="label">
+                        Auctions Conducted
+                    </div>
+                </div>
+                <div class="ui blue inverted statistic">
+                    <div class="value">
+                        <i class="microphone icon"></i> 23
+                    </div>
+                    <div class="label">
+                        Live Auctions
+                    </div>
+                </div>
+                <div class="ui blue inverted statistic">
+                    <div class="value">
+                        <i class="users icon"></i>
+                        1200
+                    </div>
+                    <div class="label">
+                        Registered Users
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui divider"></div>
+    <div class="ui container grid stackable centered computer only">
+        <div class="row">
+            <div class="ui inverted white header">
+                <h1>Real Time Info</h1>
+            </div>
+        </div>
+        <div class="row">
+            <table class="ui inverted very basic collapsing celled table">
+                <thead>
+                    <tr>
+                        <th>Lot</th>
+                        <th>Auctioneer</th>
+                        <th>Highest bid</th>
+                        <th>Hash</th>
+                        <th>Rooms</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <h4 class="ui inverted header">
+                                1. <i class="red chess queen icon"></i>Ming Vase
+                            </h4>
+                        </td>
+                        <td>
+                            <i class="teal user icon"></i>Anish Giri
+                        </td>
+                        <td>
+                            <i class="yellow rupee sign icon"></i>1.2cr
+                        </td>
+                        <td>
+                            <i class="green linkify icon"></i>{{ list[0] }}
+                        </td>
+                        <td>
+                            <a href="auctions/0"><div class="ui green animated fade button" tabindex="0">
+                                <div class="visible content">Auction Open</div>
+                                <div class="hidden content">
+                                  Enter room
+                                </div>
+                              </div>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 class="ui inverted header">
+                                2. <i class="blue file image icon"></i>Starry Night Painting
+                            </h4>
+                        </td>
+                        <td>
+                            <i class="teal user icon"></i>Jagdeesh Singh
+                        </td>
+                        <td>
+                            <i class="yellow rupee sign icon"></i>100cr
+                        </td>
+                        <td>
+                            <i class="green linkify icon"></i>{{ list[1] }}
+                        </td>
+                        <td>
+                            <a href="auctions/1"><div class="ui green animated fade button" tabindex="0">
+                                <div class="visible content">Auction Open</div>
+                                <div class="hidden content">
+                                  Enter room
+                                </div>
+                              </div></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 class="ui inverted header">
+                                3. <i class="green car icon"></i>1990 Porsche Cabriolet
+                            </h4>
+                        </td>
+                        <td>
+                            <i class="teal user icon"></i>Levy Rosman
+                        </td>
+                        <td>
+                            <i class="yellow rupee sign icon"></i>130cr
+                        </td>
+                        <td>
+                            <i class="green linkify icon"></i>{{ list[2] }}
+                        </td>
+                        <td>
+                            <a href="transaction/2"><div class="ui red animated fade button" tabindex="0">
+                                <div class="visible content">Auction Closed</div>
+                                <div class="hidden content">
+                                  Not permitted
+                                </div>
+                              </div></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 class="ui inverted header">
+                                4. <i class="black clock icon"></i>Audemars Piguet Watch
+                            </h4>
+                        </td>
+                        <td>
+                            <i class="teal user icon"></i>Sanjay Raina
+                        </td>
+                        <td>
+                            <i class="yellow rupee sign icon"></i>14cr
+                        </td>
+                        <td>
+                            <i class="green linkify icon"></i>{{ list[3] }}
+                        </td>
+                        <td>
+                            <a href="auctions/3"><div class="ui green animated fade button" tabindex="0">
+                                <div class="visible content">Auction Open</div>
+                                <div class="hidden content">
+                                  Enter room
+                                </div>
+                              </div></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script>
+        $(() => {
+            $('#example1').progress('');
+            $('#example2').progress('');
+            $('#example3').progress('');
+            $('#example4').progress('');
+        })
+        $(() => {
+            $('.ui.rating')
+                .rating();
+
+        })
+        $(() => {
+            $('.ui.basic.modal')
+                .modal('show');
+        })
+    </script>
+</body>
+
+</html>
